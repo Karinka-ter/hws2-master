@@ -1,0 +1,62 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.imageAndText {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.imageAndText img {
+    margin-top: 10px;
+    width: 48px;
+    height: 48px;
+}
+
+.text {
+    position: relative; /* Для позиционирования хвостика */
+    border-radius: 10px 10px 0px 10px; /* 3 закругленных угла */
+    padding: 7px 13px;
+    background-color: #06c;
+    margin-right: 12px; /* Место для хвостика */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:4px
+
+}
+
+
+.text:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    left: 24px;
+    border-bottom: 10px solid #06c;
+    border-right: 12px solid transparent;
+
+}
+
+
+.name {
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+}
+
+.messageText {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.time {
+    font-weight: 600;
+    font-size: 10px;
+    color: #000;
+    margin-top: 5px;
+    margin-right: 10px;
+}
