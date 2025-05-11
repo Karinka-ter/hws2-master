@@ -2,30 +2,46 @@
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    gap: 10px
 }
 
 .error {
+    color: red;
 }
 
-.input {
+input {
+   height: 30px;
+    width: 250px;
+    border-radius: 5px;
 }
 
-.input:focus {
+input:focus {
+    border: 2px solid #4d90fe; /* Голубой, как в Google */
+    outline: none; /* Убираем стандартный outline */
 }
 
 .errorInput {
+    border: 2px solid red;
 }
 
 .button {
+    height: 30px;
+    width: 100px;
+    background-color: #4d90fe;
+    border-radius: 5px;
+    border: none;
+    color: white;
 }
 
-.button:focus {
-}
+
 
 .button:active {
+    background-color: #0f5ddf;
 }
 
 .button:disabled {
+    background-color: #ccc4c4;
 }
 
 .text {
