@@ -34,13 +34,35 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
-                setCode('Код 200!')
-                setImage(success200)
+                    setCode('КОД 200!')
+                    setImage(success200)
+                setText(res.data.errorText)
+                     setInfo(res.data.info)
                 // дописать
 
             })
             .catch((e) => {
-                // дописать
+
+                switch (e.response.status){
+                    case 400:
+                        setCode('ОШИБКА 400!')
+                        setImage(error400)
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
+                        break
+
+                    case 500: setCode('ОШИБКА 500!')
+                        setImage(error500)
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
+                        break
+                    default: setCode('ERROR')
+                        setImage(errorUnknown)
+                        setText(e.massage)
+                        setInfo(e.name)
+                }
+
+
 
             })
     }
